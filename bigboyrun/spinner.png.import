@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/phone.png-f1ee730e01ba318fbd17095f4e91be91.stex"
+path="res://.import/spinner.png-1f7078b6f47e1dd801e88576e47655b6.stex"
 
 [deps]
 
-source_file="res://assets/phone.png"
-source_md5="a71f2997551f06a504d2e8f759f8d39a"
+source_file="res://spinner.png"
+source_md5="65c0d9c7894d79ed95cbcbac11a64b4a"
 
-dest_files=[ "res://.import/phone.png-f1ee730e01ba318fbd17095f4e91be91.stex" ]
-dest_md5="ec98f4e3ab96ffd299948c086d1243f0"
+dest_files=[ "res://.import/spinner.png-1f7078b6f47e1dd801e88576e47655b6.stex" ]
+dest_md5="d2f998228733a59efd3c0dfa39cd2503"
 
 [params]
 

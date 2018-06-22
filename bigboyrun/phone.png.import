@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hall.png-76ea5a8fe3f85c56b8d3d371160ee05d.stex"
+path="res://.import/phone.png-7be38bcfc01608d1de3971b4ca584099.stex"
 
 [deps]
 
-source_file="res://assets/hall.png"
-source_md5="bda8b6b601f9c6089ab5ca90a3057fa3"
+source_file="res://phone.png"
+source_md5="a71f2997551f06a504d2e8f759f8d39a"
 
-dest_files=[ "res://.import/hall.png-76ea5a8fe3f85c56b8d3d371160ee05d.stex" ]
-dest_md5="b670ce9b1ea675a5b7299385b2f9642a"
+dest_files=[ "res://.import/phone.png-7be38bcfc01608d1de3971b4ca584099.stex" ]
+dest_md5="ec98f4e3ab96ffd299948c086d1243f0"
 
 [params]
 

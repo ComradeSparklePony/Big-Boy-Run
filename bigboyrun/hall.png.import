@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/spinner.png-f1256dbeed6ecd00ef2ec29851302c6d.stex"
+path="res://.import/hall.png-4832f5a54e223ecfa3edad07773142f0.stex"
 
 [deps]
 
-source_file="res://assets/spinner.png"
-source_md5="65c0d9c7894d79ed95cbcbac11a64b4a"
+source_file="res://hall.png"
+source_md5="7969676b0eae62932bd06430ba81e0b7"
 
-dest_files=[ "res://.import/spinner.png-f1256dbeed6ecd00ef2ec29851302c6d.stex" ]
-dest_md5="d2f998228733a59efd3c0dfa39cd2503"
+dest_files=[ "res://.import/hall.png-4832f5a54e223ecfa3edad07773142f0.stex" ]
+dest_md5="1181306418440777190ad568c84f18bc"
 
 [params]
 
