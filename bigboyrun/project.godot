@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Big Boy Run"
+config/name="Grandpa"
 run/main_scene="res://start.tscn"
 config/icon="res://icon.png"
 
