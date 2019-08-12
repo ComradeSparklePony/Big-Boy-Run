@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/chromebook.png-3e049f20a6090bcbc955e1e7d078e2ee.stex"
+path="res://.import/rootcanal.jpg-507e497adbb73fe1245032205b700822.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/chromebook.png"
-dest_files=[ "res://.import/chromebook.png-3e049f20a6090bcbc955e1e7d078e2ee.stex" ]
+source_file="res://temp/rootcanal.jpg"
+dest_files=[ "res://.import/rootcanal.jpg-507e497adbb73fe1245032205b700822.stex" ]
 
 [params]
 

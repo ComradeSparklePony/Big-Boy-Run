@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://start.gd" type="Script" id=1]
+[ext_resource path="res://game.tscn" type="PackedScene" id=2]
+[ext_resource path="res://temp/icon.jpg" type="Texture" id=3]
+
+[node name="start" type="Node2D"]
+script = ExtResource( 1 )
+scn = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 71.0
+text = "happy birthday grandpa!
+use the TAB and DELETE 
+keys on the keyboard to 
+spin and get points
+   love you, -dmitri"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 126.726
+margin_top = 374.402
+margin_right = 528.726
+margin_bottom = 451.402
+text = "press me 2 start"
+
+[node name="Sprite" type="Sprite" parent="Button"]
+position = Vector2( 404.432, -88.6426 )
+texture = ExtResource( 3 )
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

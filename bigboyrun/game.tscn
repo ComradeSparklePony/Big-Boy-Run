@@ -1,123 +1,72 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://game.gd" type="Script" id=1]
 [ext_resource path="res://phone.tscn" type="PackedScene" id=2]
 [ext_resource path="res://spinner.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/chromebook.tscn" type="PackedScene" id=4]
-[ext_resource path="res://hall.png" type="Texture" id=5]
+[ext_resource path="res://temp/office.jpg" type="Texture" id=5]
 [ext_resource path="res://player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/comicsans.tres" type="DynamicFont" id=7]
 
-[sub_resource type="RectangleShape2D" id=2]
-
-custom_solver_bias = 0.0
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 40, 240 )
 
-[sub_resource type="RectangleShape2D" id=3]
-
-custom_solver_bias = 0.0
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 360, 10 )
 
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 320, 40 )
 
-[node name="game" type="Node2D" index="0"]
+[sub_resource type="PhysicsMaterial" id=5]
+bounce = 0.9
 
+[node name="game" type="Node2D"]
 script = ExtResource( 1 )
 phone = ExtResource( 2 )
 spinner = ExtResource( 3 )
 chromebook = ExtResource( 4 )
 
-[node name="player-walls" type="StaticBody2D" parent="." index="0" groups=[
+[node name="player-walls" type="StaticBody2D" parent="." groups=[
 "kill_object",
 ]]
-
 position = Vector2( 680, 240 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="player-walls" index="0"]
-
-shape = SubResource( 2 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="player-walls" index="1"]
-
-position = Vector2( -720, 0 )
-shape = SubResource( 2 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player-walls" index="2"]
-
-position = Vector2( -360, -240 )
-shape = SubResource( 3 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="background" type="Sprite" parent="." index="1"]
-
-position = Vector2( 320, 240 )
-texture = ExtResource( 5 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="ground" type="StaticBody2D" parent="." index="2"]
-
-position = Vector2( 320, 440 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-_sections_unfolded = [ "Transform" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ground" index="0"]
-
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="player-walls"]
 shape = SubResource( 1 )
 
-[node name="player" parent="." index="3" instance=ExtResource( 6 )]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="player-walls"]
+position = Vector2( -720, 0 )
+shape = SubResource( 1 )
 
-position = Vector2( 95.769, 69.4795 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player-walls"]
+position = Vector2( -360, -240 )
+shape = SubResource( 2 )
 
-[node name="Timer" type="Timer" parent="." index="4"]
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 362.659, 240 )
+scale = Vector2( 1.53014, 2 )
+texture = ExtResource( 5 )
 
-process_mode = 1
-wait_time = 1.0
-one_shot = false
+[node name="ground" type="StaticBody2D" parent="."]
+position = Vector2( 320, 440 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ground"]
+shape = SubResource( 3 )
+
+[node name="Timer" type="Timer" parent="."]
 autostart = true
 
-[node name="phone" parent="." index="5" instance=ExtResource( 2 )]
-
+[node name="phone" parent="." instance=ExtResource( 2 )]
 position = Vector2( 595.27, 182.149 )
+physics_material_override = SubResource( 5 )
 
-[node name="Label" type="Label" parent="." index="6"]
+[node name="player" parent="." instance=ExtResource( 6 )]
+position = Vector2( 264.82, 243.767 )
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label" type="Label" parent="."]
 margin_right = 40.0
 margin_bottom = 14.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
 custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "p01n75: 0"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
-
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
-
-

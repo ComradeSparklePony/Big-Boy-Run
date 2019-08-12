@@ -12,7 +12,7 @@ func _ready():
 	$Timer.wait_time = 2
 
 func _process(delta):
-	$Label.text = "p01n75: " + str($player.points)
+	$Label.text = "points: " + str($player.points)
 
 
 func _on_Timer_timeout():
